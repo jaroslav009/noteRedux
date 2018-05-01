@@ -15,14 +15,14 @@ class Container extends Component {
     edit() {
         this.setState({edit: true})
         console.log(this.state.data)
+        console.log(this.props.updateText)
     }
 
     save() {
         this.setState({edit: false})
         var text = this.refs.textEdit.value
         console.log(this.props.data)
-        this.props.updateText(this.props.title)
-        console.log(this.props.data)
+        console.log(this.props.updateText(text))
     }
 
     rendNorm() {

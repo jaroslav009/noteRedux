@@ -1,7 +1,7 @@
 export default function(state="", active) {
     switch (active.type) {
         case 'UPDATE_TEXT':
-            return active.payload
+            return Object.assign({}, state, { text: active.payload })
             break;
     
         default:
